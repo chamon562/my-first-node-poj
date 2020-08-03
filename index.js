@@ -1,3 +1,41 @@
+//node keyword requre allows us to import modules
+//inside require give it the path to mymodue
+const myModule = require('./myModule')
+const fs = require('fs')
+
+
+const http = require('http')
+http.createServer((req, res) =>{
+    //for response write to client the tring hellow world
+    res.write('Hello, World!')
+    res.end()
+}).listen(8000) //tell which port listen to 8000 old image or telephone operator
+
+//3 arguments name , reading english character, last one is data err
+fs.readFile('story.txt', 'utf8', (err, data) =>{
+    if(err){
+        console.log("there was problem reading file")
+    } else{
+        console.log(data)
+    }
+})
+// console.log(myModule.beBasic())
+
+// //run myModule.count() in js make sure to export in myModule.
+// myModule.count()
+
+// console.log('Hello to the New World!')
+
+let i = 1
+
+const count = () =>{
+    console.log(i)
+    i = i*2
+}
+
+// const myTimer = setInterval(count, 1000)
+//using nodemon to count 
+
 // console.log('Hello World')
 // let i = 1
 
